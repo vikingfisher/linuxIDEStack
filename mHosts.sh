@@ -39,6 +39,23 @@ $1     download.up360.com
 192.168.18.248    team.up360.com        
 " >> /etc/hosts
 }
+#local
+function modifyLocalHosts(){
+
+echo -n "[ /etc/hosts modified to $IP ]"; success; echo;
+
+echo "
+$1     www.up360.com
+192.168.18.223     data.up360.com
+192.168.18.223     static.up360.com
+$1     m.up360.com
+$1     parent.up360.com
+$1     download.up360.com
+192.168.18.243    fms.up360.com
+192.168.18.248    git.up360.com        
+192.168.18.248    team.up360.com        
+" >> /etc/hosts
+}
 printf "Please enter Env IP：\n"
 printf "Desc: 1-13,2-223,3-Online,4-47,5-Local \n"
         read ipNum
@@ -66,5 +83,5 @@ printf "Desc: 1-13,2-223,3-Online,4-47,5-Local \n"
         elif [ "x"$ipNum == "x5" ];then
                 IP=127.0.0.1
 		defaultHosts
-		modifyHosts $IP
+		modifyLocalHosts $IP
         fi
