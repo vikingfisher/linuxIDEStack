@@ -20,6 +20,8 @@ cat >> /etc/hosts << EOF
 # that require network functionality will fail.
 127.0.0.1            localhost.localdomain localhost
 ::1                  localhost6.localdomain6 localhost6
+192.168.18.248    git.up360.com        
+192.168.18.248    team.up360.com  
 EOF
 }
 
@@ -35,8 +37,7 @@ $1     m.up360.com
 $1     parent.up360.com
 $1     download.up360.com
 192.168.18.243    fms.up360.com
-192.168.18.248    git.up360.com        
-192.168.18.248    team.up360.com        
+      
 " >> /etc/hosts
 }
 #local
@@ -52,8 +53,7 @@ $1     m.up360.com
 $1     parent.up360.com
 $1     download.up360.com
 192.168.18.243    fms.up360.com
-192.168.18.248    git.up360.com        
-192.168.18.248    team.up360.com        
+       
 " >> /etc/hosts
 }
 printf "Please enter Env IP：\n"
